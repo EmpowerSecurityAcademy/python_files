@@ -18,3 +18,13 @@ def text_import(file_name):
 		lines.append(line)
 	return lines
 
+def extract_food(file_name):
+	json_data = json_import(file_name)
+	food = []
+
+	for key, value in json_data.items():
+		food.append(str(json_data[key]["food"]))
+
+	return food
+
+def reformat_food(file_name)

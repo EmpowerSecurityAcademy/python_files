@@ -21,6 +21,5 @@ class TestFileImport(unittest.TestCase):
 
 		self.assertEqual(data, ['I really enjoy writing code\n', 'I also enjoy learning about cybersecurity'])
 
-
 if __name__ == '__main__':
 	unittest.main()
