@@ -1,5 +1,5 @@
 import unittest
-from files import extract_food, reformat_meals
+from files import extract_food, reformat_meals, age_summer
 
 class TestFileManipulation(unittest.TestCase):
 
@@ -37,7 +37,13 @@ class TestFileManipulation(unittest.TestCase):
 		self.assertEqual(len(reformatted["drink"]), 3)
 		self.assertEqual(len(reformatted["food"]), 3)
 
+	def test_cumulative_age(self):
+		csv_file = "data.csv"
+		cumulative_age = age_summer(csv_file)
 
+		self.assertEqual(cumulative_age, 294)
+
+	
 
 if __name__ == '__main__':
 	unittest.main(verbosity=2)

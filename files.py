@@ -17,6 +17,7 @@ def text_import(file_name):
 		lines.append(line)
 	return lines
 
+#use json_import within this function
 def extract_food(file_name):
 	json_data = json_import(file_name)
 	food = []
@@ -26,6 +27,7 @@ def extract_food(file_name):
 
 	return food
 
+#use json_import within this function
 def reformat_meals(file_name):
 	json_data = json_import(file_name)
 	reformatted_meals = {}
@@ -38,3 +40,12 @@ def reformat_meals(file_name):
 
 	return reformatted_meals
 
+#use csv_import within this function
+def age_summer(file_name):
+	csv_data = csv_import(file_name)
+	age_total = 0
+
+	for index, row in csv_data.iterrows():
+		age_total += row["age"]
+
+	return age_total
