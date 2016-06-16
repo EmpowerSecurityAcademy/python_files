@@ -27,4 +27,14 @@ def extract_food(file_name):
 
 	return food
 
-def reformat_food(file_name)
+def reformat_meals(file_name):
+	json_data = json_import(file_name)
+	reformatted_meals = {}
+	reformatted_meals["drink"] = []
+	reformatted_meals["food"] = []
+
+	for key, value in json_data.items():
+		reformatted_meals["drink"].append(str(json_data[key]["drink"]))
+		reformatted_meals["food"].append(str(json_data[key]["food"]))
+
+	return reformatted_meals
