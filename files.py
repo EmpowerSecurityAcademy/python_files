@@ -10,7 +10,6 @@ def csv_import(file_name):
 	df = pd.read_csv(file_name)
 	return df
 
-
 def text_import(file_name):
 	f = open(file_name)
 	lines = []
@@ -38,3 +37,4 @@ def reformat_meals(file_name):
 		reformatted_meals["food"].append(str(json_data[key]["food"]))
 
 	return reformatted_meals
+
