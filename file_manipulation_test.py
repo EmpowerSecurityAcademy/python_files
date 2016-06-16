@@ -1,5 +1,5 @@
 import unittest
-from files import extract_food, reformat_meals, age_summer, first_names_starting_with_j
+from files import extract_food, reformat_meals, age_summer, first_names_starting_with_j, extract_i_and_I_from_text
 
 class TestFileManipulation(unittest.TestCase):
 
@@ -49,6 +49,12 @@ class TestFileManipulation(unittest.TestCase):
 
 		self.assertEqual(j_names, ["Jason", "Jake"])
 
+	def test_extract_i_and_I_from_text(self):
+		txt_file = "data.txt"
+		i_I_removed = extract_i_and_I_from_text(txt_file)
+
+		self.assertIn(' really enjoy wrtng code\n', i_I_removed)
+		self.assertIn(' also enjoy learnng about cybersecurty', i_I_removed)
 
 
 

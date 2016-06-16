@@ -60,3 +60,17 @@ def first_names_starting_with_j(file_name):
 
 	return j_names
 
+def extract_i_and_I_from_text(file_name):
+	txt_data = text_import(file_name)
+	stripped = []
+
+	for sentence in txt_data:
+		i_removed = sentence.replace("i", "")
+		i_I_removed = i_removed.replace("I", "")
+		stripped.append(i_I_removed)
+
+	return stripped
+
+
+
+
