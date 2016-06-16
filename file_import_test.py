@@ -9,6 +9,7 @@ class TestFileImport(unittest.TestCase):
 
 		self.assertEqual(data["breakfast"]["food"], "cereal")
 
+	#use the pandas library read_csv method for this
 	def test_csv_import(self):
 		csv_file = "data.csv"
 		data = csv_import(csv_file)

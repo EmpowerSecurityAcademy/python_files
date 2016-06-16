@@ -1,5 +1,5 @@
 import unittest
-from files import extract_food, reformat_meals, age_summer
+from files import extract_food, reformat_meals, age_summer, first_names_starting_with_j
 
 class TestFileManipulation(unittest.TestCase):
 
@@ -43,7 +43,14 @@ class TestFileManipulation(unittest.TestCase):
 
 		self.assertEqual(cumulative_age, 294)
 
-	
+	def test_first_names_starting_with_j(self):
+		csv_file = "data.csv"
+		j_names = first_names_starting_with_j(csv_file)
+
+		self.assertEqual(j_names, ["Jason", "Jake"])
+
+
+
 
 if __name__ == '__main__':
 	unittest.main(verbosity=2)

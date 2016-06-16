@@ -49,3 +49,14 @@ def age_summer(file_name):
 		age_total += row["age"]
 
 	return age_total
+
+def first_names_starting_with_j(file_name):
+	csv_data  = csv_import(file_name)
+	j_names = []
+
+	for index, row in csv_data.iterrows():
+		if row["first_name"][0] == "J":
+			j_names.append(row["first_name"])
+
+	return j_names
+
