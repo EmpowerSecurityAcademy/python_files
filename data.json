@@ -1,0 +1,14 @@
+{
+	"breakfast": {
+		"drink": "tea",
+		"food": "cereal"
+	},
+	"lunch": {
+		"drink": "lemonade",
+		"food": "sandwich"
+	},
+	"dinner": {
+		"drink": "wine",
+		"food": "lasagna"
+	}
+}
