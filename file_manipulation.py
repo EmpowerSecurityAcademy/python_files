@@ -1,3 +1,4 @@
+from file_import import json_import, csv_import, text_import
 
 #use json_import within this function
 def extract_food(file_name):
