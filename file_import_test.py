@@ -26,7 +26,7 @@ class TestFileImport(unittest.TestCase):
 		xml_file = "./files/data.xml"
 		data = xml_import(xml_file)
 
-		print(data)
+		self.assertEqual(data['note']['to'], 'Tove')
 
 if __name__ == '__main__':
 	unittest.main(verbosity=2)

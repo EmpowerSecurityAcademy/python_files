@@ -1,6 +1,6 @@
 import json
 import pandas as pd
-import xml.etree.ElementTree
+import xmltodict
 
 def json_import(file_name):
 	with open(file_name) as json_file:
@@ -19,8 +19,8 @@ def text_import(file_name):
 	return lines
 
 def xml_import(file_name):
-	xml_element = xml.etree.ElementTree.parse(file_name).getroot()
-	return xml_element
-
+	with open(file_name) as file:
+		doc = xmltodict.parse(file.read())
+	return doc
 
 
