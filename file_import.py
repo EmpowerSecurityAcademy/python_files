@@ -6,7 +6,9 @@ import xmltodict
 # and will return a python dictionary of the json object
 # example json_import('../files/data.json')
 def json_import(file_name):
-
+	with open(file_name) as data_file:    
+		data = json.load(data_file)
+	return data
 
 
 

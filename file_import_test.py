@@ -1,5 +1,5 @@
 import unittest
-from file_import import json_import, csv_import, text_import, xml_import
+from file_import import *
 
 class TestFileImport(unittest.TestCase):
 

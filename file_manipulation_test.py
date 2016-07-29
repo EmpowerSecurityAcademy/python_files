@@ -1,5 +1,5 @@
 import unittest
-from file_manipulation import extract_food, reformat_meals, age_summer, first_names_starting_with_j, extract_i_and_I_from_text
+from file_manipulation import *
 
 class TestFileManipulation(unittest.TestCase):
 
