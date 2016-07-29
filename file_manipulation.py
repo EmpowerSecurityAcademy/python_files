@@ -35,7 +35,7 @@ def extract_food(file_name):
 
 # read in the sentences
 # replace all lower and upper case i, I with an empty string ""
-#def extract_i_and_I_from_text(file_name):
+# def extract_i_and_I_from_text(file_name):
 
 
 
