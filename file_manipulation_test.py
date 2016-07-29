@@ -4,7 +4,7 @@ from file_manipulation import *
 class TestFileManipulation(unittest.TestCase):
 
 	def test_extract_food(self):
-		json_file = "data.json"
+		json_file = "./files/data.json"
 		extracted_food = extract_food(json_file)
 
 		self.assertIn("sandwich", extracted_food)
@@ -22,7 +22,7 @@ class TestFileManipulation(unittest.TestCase):
 	"""
 
 	# def test_reformat_meals(self):
-	# 	json_file = "data.json"
+	# 	json_file = "./files/data.json"
 	# 	reformatted = reformat_meals(json_file)
 
 
@@ -38,19 +38,19 @@ class TestFileManipulation(unittest.TestCase):
 	# 	self.assertEqual(len(reformatted["food"]), 3)
 
 	# def test_cumulative_age(self):
-	# 	csv_file = "data.csv"
+	# 	csv_file = "./files/data.csv"
 	# 	cumulative_age = age_summer(csv_file)
 
 	# 	self.assertEqual(cumulative_age, 294)
 
 	# def test_first_names_starting_with_j(self):
-	# 	csv_file = "data.csv"
+	# 	csv_file = "./files/data.csv"
 	# 	j_names = first_names_starting_with_j(csv_file)
 
 	# 	self.assertEqual(j_names, ["Jason", "Jake"])
 
 	# def test_extract_i_and_I_from_text(self):
-	# 	txt_file = "data.txt"
+	# 	txt_file = "./files/data.txt"
 	# 	i_I_removed = extract_i_and_I_from_text(txt_file)
 
 	# 	self.assertIn(' really enjoy wrtng code\n', i_I_removed)

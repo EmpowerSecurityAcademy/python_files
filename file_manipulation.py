@@ -1,4 +1,4 @@
-from file_import import json_import, csv_import, text_import
+from file_import import *
 
 #use json_import within this function to load the json object
 # then reformat the keys and the values associated with
