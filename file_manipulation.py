@@ -1,58 +1,42 @@
 from file_import import json_import, csv_import, text_import
 
-#use json_import within this function
+#use json_import within this function to load the json object
+# then reformat the keys and the values associated with
+# the key "food", and return as a list
 def extract_food(file_name):
-	json_data = json_import(file_name)
-	food = []
 
-	for key, value in json_data.items():
-		food.append(str(json_data[key]["food"]))
 
-	return food
 
-#use json_import within this function
-def reformat_meals(file_name):
-	json_data = json_import(file_name)
-	reformatted_meals = {}
-	reformatted_meals["drink"] = []
-	reformatted_meals["food"] = []
 
-	for key, value in json_data.items():
-		reformatted_meals["drink"].append(str(json_data[key]["drink"]))
-		reformatted_meals["food"].append(str(json_data[key]["food"]))
 
-	return reformatted_meals
+# use json_import within this function to load the json object
+# then reformat the object to look like the python dictionary
+# that exists on line 16 of the test file
+#def reformat_meals(file_name):
+
+
+
+
 
 #use csv_import within this function
-def age_summer(file_name):
-	csv_data = csv_import(file_name)
-	age_total = 0
+#return the sum of everyones age
+#def age_summer(file_name):
+	
 
-	for index, row in csv_data.iterrows():
-		age_total += row["age"]
 
-	return age_total
 
-def first_names_starting_with_j(file_name):
-	csv_data  = csv_import(file_name)
-	j_names = []
+# use csv_import
+# return an array of everyones name 
+# that begins with the letter j
+# def first_names_starting_with_j(file_name):
 
-	for index, row in csv_data.iterrows():
-		if row["first_name"][0] == "J":
-			j_names.append(row["first_name"])
 
-	return j_names
 
-def extract_i_and_I_from_text(file_name):
-	txt_data = text_import(file_name)
-	stripped = []
 
-	for sentence in txt_data:
-		i_removed = sentence.replace("i", "")
-		i_I_removed = i_removed.replace("I", "")
-		stripped.append(i_I_removed)
+# read in the sentences
+# replace all lower and upper case i, I with an empty string ""
+#def extract_i_and_I_from_text(file_name):
 
-	return stripped
 
 
 
