@@ -4,7 +4,7 @@ from file_import import *
 # then reformat the keys and the values associated with
 # the key "food", and return as a list
 def extract_food(file_name):
-
+	return file_name
 
 
 
